@@ -11,7 +11,7 @@ class CanceledMedicineController extends Controller
 {
     public function fileImport()
     {
-        Excel::import(new CanceledMedicineImport, public_path('data/produk_batal.csv'));
+        Excel::import(new CanceledMedicineImport, public_path('produk_batal.csv'));
 
         return [
             'data successfully imported'
