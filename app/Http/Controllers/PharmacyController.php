@@ -19,7 +19,7 @@ class PharmacyController extends Controller
     }
     public function fileImport()
     {
-        Excel::import(new PharmacyImport, 'data\komuniti_farmasi.csv');
+        Excel::import(new PharmacyImport, 'data/komuniti_farmasi.csv');
 
         return [
             'data successfully imported'
