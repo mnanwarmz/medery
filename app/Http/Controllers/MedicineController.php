@@ -19,7 +19,7 @@ class MedicineController extends Controller
     }
     public function fileImport()
     {
-        Excel::import(new MedicineImport, 'data\market_price.csv');
+        Excel::import(new MedicineImport, 'data/market_price.csv');
 
         return [
             'data successfully imported'
