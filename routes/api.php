@@ -21,11 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/login', 'AuthController@login');
 Route::post('/register', 'AuthController@register');
 
-Route::get('/registered-medicines/import', 'RegisteredMedicineController@fileImport');
-Route::get('/canceled-medicines/import', 'CanceledMedicineController@fileImport');
-Route::get('/medicines/import', 'MedicineController@fileImport');
-Route::get('/pharmacies/import', 'PharmacyController@fileImport');
 Route::group(['middleware' => 'auth:sanctum'], function () {
+    Route::get('/registered-medicines/import', 'RegisteredMedicineController@fileImport');
+    Route::get('/canceled-medicines/import', 'CanceledMedicineController@fileImport');
+    Route::get('/medicines/import', 'MedicineController@fileImport');
+    Route::get('/pharmacies/import', 'PharmacyController@fileImport');
     Route::get('/medicines', 'MedicineController@index');
     Route::get('/registerd-medicines', 'RegisteredMedicineController@index');
     Route::get('/canceled-medicines', 'CanceledMedicineController@index');
