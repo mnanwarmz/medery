@@ -15,14 +15,14 @@ class CreateCanceledMedicinesTable extends Migration
     {
         Schema::create('canceled_medicines', function (Blueprint $table) {
             $table->id();
-            $table->string('register_number');
-            $table->string('product_name');
-            $table->string('description');
-            $table->date('register_date');
-            $table->date('end_register_date');
-            $table->date('cancel_date');
-            $table->string('holder_name');
-            $table->string('manufacturer_name');
+            $table->string('register_number')->nullable();
+            $table->string('product_name')->nullable();
+            $table->string('description')->nullable();
+            $table->time('register_date')->nullable();
+            $table->time('end_register_date')->nullable();
+            $table->time('cancel_date')->nullable();
+            $table->string('holder_name')->nullable();
+            $table->string('manufacturer_name')->nullable();
             $table->timestamps();
         });
     }

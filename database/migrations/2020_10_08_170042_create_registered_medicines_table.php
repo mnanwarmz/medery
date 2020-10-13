@@ -15,13 +15,13 @@ class CreateRegisteredMedicinesTable extends Migration
     {
         Schema::create('registered_medicines', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('registered_number');
-            $table->string('product_name');
-            $table->string('status');
-            $table->string('holder_name');
-            $table->string('ref_number');
-            $table->string('manufacturer_name');
-            $table->string('description');
+            $table->string('registered_number')->nullable();
+            $table->string('product_name')->nullable();
+            $table->string('status')->nullable();
+            $table->string('holder_name')->nullable();
+            $table->string('ref_number')->nullable();
+            $table->string('manufacturer_name')->nullable();
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
