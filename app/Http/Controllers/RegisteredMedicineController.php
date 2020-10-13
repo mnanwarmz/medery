@@ -19,7 +19,7 @@ class RegisteredMedicineController extends Controller
     }
     public function fileImport()
     {
-        Excel::import(new RegisteredMedicinesImport, 'data/produk_daftar.csv');
+        Excel::import(new RegisteredMedicinesImport, public_path('produk_daftar.csv'));
 
         return [
             'data successfully imported'
